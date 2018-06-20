@@ -41,7 +41,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Update Text"/>
                                 <connections>
-                                    <action selector="enableLocationPermission" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWl-qP-mol"/>
                                     <action selector="updateLogTextField" destination="BYZ-38-t0r" eventType="touchUpInside" id="nJH-hH-DrQ"/>
                                 </connections>
                             </button>
@@ -50,9 +49,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Load New Ad"/>
                                 <connections>
-                                    <action selector="enableLocationPermission" destination="BYZ-38-t0r" eventType="touchUpInside" id="xDX-kU-uMX"/>
                                     <action selector="loadAd" destination="BYZ-38-t0r" eventType="touchUpInside" id="KSg-qk-X6o"/>
-                                    <action selector="updateLogTextField" destination="BYZ-38-t0r" eventType="touchUpInside" id="xFq-js-peA"/>
+                                    <action selector="updateLogTextField" destination="BYZ-38-t0r" eventType="touchUpInside" id="RpH-lP-A7d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpR-PR-gld">

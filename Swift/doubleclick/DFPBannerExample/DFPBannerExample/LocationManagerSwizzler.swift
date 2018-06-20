@@ -123,7 +123,7 @@ extension CLLocationManager {
 
             IssueReproduction.instance.fireNotification(title: "Stop Updating",
                                                         body: "Google?")
-//            IssueReproduction.instance.log("- stopUpdatingLocation\n\(stackString)")
+            IssueReproduction.instance.log("- stopUpdatingLocation\n\(stackString)")
         }
     }
 }

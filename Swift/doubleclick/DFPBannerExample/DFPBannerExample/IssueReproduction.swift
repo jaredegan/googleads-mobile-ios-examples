@@ -24,7 +24,10 @@ class IssueReproduction: NSObject, CLLocationManagerDelegate {
     }
 
     func log(_ message: String) {
-        logMessage = "\(logMessage)\n\(message)"
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = dateFormatterGet.string(from: Date())
+        logMessage = "\(logMessage)\n\n\(date)\n\n\(message)"
     }
 
     func startUpdating() {
