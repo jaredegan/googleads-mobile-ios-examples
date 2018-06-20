@@ -12,9 +12,14 @@
 		84FEE8E81B0D4D47006C8148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FEE8E61B0D4D47006C8148 /* Main.storyboard */; };
 		84FEE8EA1B0D4D47006C8148 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FEE8E91B0D4D47006C8148 /* Images.xcassets */; };
 		84FEE8ED1B0D4D47006C8148 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FEE8EB1B0D4D47006C8148 /* LaunchScreen.xib */; };
+		F5F25736757160D4351B7FD7 /* Pods_DFPBannerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E99275B9D7B1AF5F1EDA8B /* Pods_DFPBannerExample.framework */; };
+		FB96410C20DAA7AD0001B5E8 /* IssueReproduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96410B20DAA7AD0001B5E8 /* IssueReproduction.swift */; };
+		FB96410E20DAA8E10001B5E8 /* MyDFPAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96410D20DAA8E10001B5E8 /* MyDFPAd.swift */; };
+		FB96411020DADA880001B5E8 /* LocationManagerSwizzler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96410F20DADA880001B5E8 /* LocationManagerSwizzler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26E99275B9D7B1AF5F1EDA8B /* Pods_DFPBannerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DFPBannerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FEE8DD1B0D4D47006C8148 /* DFPBannerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DFPBannerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FEE8E11B0D4D47006C8148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84FEE8E21B0D4D47006C8148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +27,11 @@
 		84FEE8E71B0D4D47006C8148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84FEE8E91B0D4D47006C8148 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		84FEE8EC1B0D4D47006C8148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AE7F16D3A9FA82AFABAE5458 /* Pods-DFPBannerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFPBannerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DFPBannerExample/Pods-DFPBannerExample.debug.xcconfig"; sourceTree = "<group>"; };
+		BB19F12287390EC0B4897028 /* Pods-DFPBannerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFPBannerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-DFPBannerExample/Pods-DFPBannerExample.release.xcconfig"; sourceTree = "<group>"; };
+		FB96410B20DAA7AD0001B5E8 /* IssueReproduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueReproduction.swift; sourceTree = "<group>"; };
+		FB96410D20DAA8E10001B5E8 /* MyDFPAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDFPAd.swift; sourceTree = "<group>"; };
+		FB96410F20DADA880001B5E8 /* LocationManagerSwizzler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerSwizzler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F25736757160D4351B7FD7 /* Pods_DFPBannerExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AAAC5932A8265EA6031EDB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26E99275B9D7B1AF5F1EDA8B /* Pods_DFPBannerExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84FEE8D41B0D4D47006C8148 = {
 			isa = PBXGroup;
 			children = (
 				84FEE8DF1B0D4D47006C8148 /* DFPBannerExample */,
 				84FEE8DE1B0D4D47006C8148 /* Products */,
+				B5CB5561BFD4298990C8052B /* Pods */,
+				4AAAC5932A8265EA6031EDB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +81,9 @@
 				84FEE8E91B0D4D47006C8148 /* Images.xcassets */,
 				84FEE8EB1B0D4D47006C8148 /* LaunchScreen.xib */,
 				84FEE8E01B0D4D47006C8148 /* Supporting Files */,
+				FB96410B20DAA7AD0001B5E8 /* IssueReproduction.swift */,
+				FB96410D20DAA8E10001B5E8 /* MyDFPAd.swift */,
+				FB96410F20DADA880001B5E8 /* LocationManagerSwizzler.swift */,
 			);
 			path = DFPBannerExample;
 			sourceTree = "<group>";
@@ -72,6 +96,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B5CB5561BFD4298990C8052B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE7F16D3A9FA82AFABAE5458 /* Pods-DFPBannerExample.debug.xcconfig */,
+				BB19F12287390EC0B4897028 /* Pods-DFPBannerExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,6 +112,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84FEE8FC1B0D4D47006C8148 /* Build configuration list for PBXNativeTarget "DFPBannerExample" */;
 			buildPhases = (
+				CB7BAF5DBDB73AC827E612F3 /* [CP] Check Pods Manifest.lock */,
 				84FEE8D91B0D4D47006C8148 /* Sources */,
 				84FEE8DA1B0D4D47006C8148 /* Frameworks */,
 				84FEE8DB1B0D4D47006C8148 /* Resources */,
@@ -105,7 +139,13 @@
 				TargetAttributes = {
 					84FEE8DC1B0D4D47006C8148 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = LYKGPFB9DX;
 						LastSwiftMigration = 0900;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -140,13 +180,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CB7BAF5DBDB73AC827E612F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DFPBannerExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84FEE8D91B0D4D47006C8148 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB96411020DADA880001B5E8 /* LocationManagerSwizzler.swift in Sources */,
 				84FEE8E51B0D4D47006C8148 /* ViewController.swift in Sources */,
+				FB96410E20DAA8E10001B5E8 /* MyDFPAd.swift in Sources */,
 				84FEE8E31B0D4D47006C8148 /* AppDelegate.swift in Sources */,
+				FB96410C20DAA7AD0001B5E8 /* IssueReproduction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,13 +329,15 @@
 		};
 		84FEE8FD1B0D4D47006C8148 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE7F16D3A9FA82AFABAE5458 /* Pods-DFPBannerExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
+				DEVELOPMENT_TEAM = LYKGPFB9DX;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = DFPBannerExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.google.ads.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -282,13 +348,15 @@
 		};
 		84FEE8FE1B0D4D47006C8148 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB19F12287390EC0B4897028 /* Pods-DFPBannerExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImages;
+				DEVELOPMENT_TEAM = LYKGPFB9DX;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = DFPBannerExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.google.ads.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
