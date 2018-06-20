@@ -36,7 +36,7 @@ class IssueReproduction: NSObject, CLLocationManagerDelegate {
     }
 
     func stopUpdating() {
-        locationManager.startUpdatingLocation()
+        locationManager.stopUpdatingLocation()
     }
     
     func askForNotificationPermission() {

@@ -21,8 +21,22 @@ import CoreLocation
 
 class ViewController: UIViewController, GADRewardBasedVideoAdDelegate {
 
-  /// The DFP banner view.
-  @IBOutlet weak var bannerView: DFPBannerView!
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(self.willResignActive), name: .UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didBecomeActive), name: .UIApplicationDidBecomeActive, object: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(self.willResignActive), name: .UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didBecomeActive), name: .UIApplicationDidBecomeActive, object: nil)
+    }
+
+    /// The DFP banner view.
+    var bannerView: DFPBannerView?
     @IBOutlet weak var textView: UITextView!
 
     override func viewDidLoad() {
@@ -32,23 +46,13 @@ class ViewController: UIViewController, GADRewardBasedVideoAdDelegate {
         // Simulate what our app does
         startVideoAds()
 
-        // Make banner ad request
-        bannerView.adUnitID = "/1025479/Mobile_iPhone_Home_Screen_Anchor_P"
-        // adUnitId from sample app: "/6499/example/banner"
-        bannerView.rootViewController = self
+        resetAd()
+    }
 
-        let request = DFPRequest()
-        let extras = GADExtras()
-        extras.additionalParameters = [
-            "dfp_latitude": 42.361145,
-            "dfp_longitude": -71.057083,
-            "dfp_ad_id": ASIdentifierManager.shared().advertisingIdentifier.uuidString,
-            "dfp_dnt": !ASIdentifierManager.shared().isAdvertisingTrackingEnabled
-        ]
-        request.register(extras)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
 
-        bannerView.load(request)
-
+        loadAd()
     }
 
     private func startVideoAds() {
@@ -73,5 +77,46 @@ class ViewController: UIViewController, GADRewardBasedVideoAdDelegate {
     @IBAction
     private func updateLogTextField() {
         textView.text = IssueReproduction.instance.logMessage
+    }
+
+    @IBAction
+    private func loadAd() {
+
+        // Make banner ad request
+        bannerView!.adUnitID = "/1025479/Mobile_iPhone_Home_Screen_Anchor_P"
+        // adUnitId from sample app: "/6499/example/banner"
+        bannerView!.rootViewController = self
+
+        let request = DFPRequest()
+        let extras = GADExtras()
+        extras.additionalParameters = [
+            "dfp_latitude": 42.361145,
+            "dfp_longitude": -71.057083,
+            "dfp_ad_id": ASIdentifierManager.shared().advertisingIdentifier.uuidString,
+            "dfp_dnt": !ASIdentifierManager.shared().isAdvertisingTrackingEnabled
+        ]
+        request.register(extras)
+
+        bannerView!.load(request)
+
+    }
+
+    // MARK: - Notifications
+
+    @objc func willResignActive() {
+        resetAd()
+    }
+
+    func resetAd() {
+        self.bannerView?.removeFromSuperview()
+
+        self.bannerView = DFPBannerView(adSize: kGADAdSizeFluid)
+        self.view.addSubview(bannerView!)
+    }
+
+    @objc func didBecomeActive() {
+        DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
+            self.loadAd()
+        })
     }
 }
